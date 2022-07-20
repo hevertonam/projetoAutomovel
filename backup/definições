@@ -1,0 +1,6 @@
+definições 
+
+Category = model
+categories = models
+CategoriesRepository = ModelRepository 
+

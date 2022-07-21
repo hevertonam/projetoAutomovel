@@ -12,11 +12,6 @@ modelsRoutes.post("/", (request, response) => {
     
     const {nome, descricao} = request.body; 
 
-    const modelsAlreadyExists = modelsRepository.findByName(nome);
-
-    if(modelsAlreadyExists){
-        return response.status(400).json({error:"modelsAlreadyExists!"});
-    }
     
     modelsRepository.create({nome, descricao});
     

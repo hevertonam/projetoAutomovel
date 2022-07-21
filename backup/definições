@@ -1,6 +1,10 @@
 definições 
 
-Category = model
+Category = Model
+category = model
 categories = models
-CategoriesRepository = ModelRepository 
+CategoriesRepository = ModelsRepository 
+categories.routes = Models.routes
+categoriesRoutes = modelsRoutes
+categoryAlreadyExists = modelsAlreadyExists
 

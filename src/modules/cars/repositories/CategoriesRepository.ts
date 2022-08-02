@@ -6,11 +6,20 @@ class CategoriesRepository implements ICategoriesRepository
 {
 
 private categories : Category[];
-    static findByName: any;
-    static create: any;
 
-constructor(){
+private static INSTANCE: CategoriesRepository;
+
+ 
+private constructor(){
     this.categories = [];
+}
+
+public static getInstance():CategoriesRepository{
+    
+    if(!CategoriesRepository.INSTANCE){
+        CategoriesRepository.INSTANCE = new CategoriesRepository();
+    }
+    return CategoriesRepository.INSTANCE;
 }
 
     create({nome,descricao}:ICreateCategoryDTO) : void{

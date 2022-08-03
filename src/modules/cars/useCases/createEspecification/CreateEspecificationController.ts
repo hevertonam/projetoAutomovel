@@ -6,7 +6,7 @@ class CreateEspecificationController {
 
     constructor (private createSpecificationUseCase: CreateSpecificationUseCase){}
 
-    handle(request: Request, response: Response){
+    handle(request: Request, response: Response):Response{
     
     const {nome, descricao}=request.body;
     
